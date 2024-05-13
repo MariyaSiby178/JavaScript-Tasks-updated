@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="main.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </head>
+  <body onload="onLoader()">
+    <form class="d-flex justify-content-center mt-5">
+      <div class="user-box d-flex flex-column">
+        <label class="d-flex justify-content-center" id="proName" for="name"
+          ><b>Product Name</b></label
+        >
+        <input type="text" name="name" id="name" />
+        <p id="name_err"></p>
+        <br />
+      </div>
+      <div class="mt-4">
+        <button
+          type="button"
+          onclick="addrowFunction()"
+          value="Submit"
+          class="btn btn-outline-light ms-5"
+        >
+          Add Row
+        </button>
+      </div>
+    </form>
+
+    <div class="container d-flex justify-content-center">
+      <div>
+        <table
+          class="table table-primary shadow-lg mb-5 text-center"
+          id="myTable"
+        >
+          <thead>
+            <tr>
+              <th>S.NO</th>
+              <th>Product Name</th>
+              <th>Price</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody id="displayArea"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="d-flex justify-content-center mt-5">
+      <button
+        type="button"
+        onclick="submitFunction()"
+        value="Submit"
+        class="btn btn-outline-light"
+      >
+        Submit
+      </button>
+    </div>
+  </body>
+</html>

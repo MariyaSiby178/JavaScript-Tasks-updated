@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="main.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </head>
+  <body onload="onLoader()">
+    <form class="d-flex justify-content-evenly mt-5">
+      <div class="user-box d-flex flex-column">
+        <label for="name"><b>Name</b></label>
+        <input type="text" name="name" id="name" />
+        <p id="name_err"></p>
+        <br />
+      </div>
+      <div class="user-box d-flex flex-column">
+        <label for="number"><b>Phone Number</b></label>
+        <input type="number" name="number" id="number" />
+        <p id="number_err"></p>
+        <br />
+      </div>
+      <div class="user-box d-flex flex-column">
+        <label for="cls"><b>Class</b></label>
+        <input type="text" name="cls" id="cls" />
+        <p id="cls_err"></p>
+        <br />
+      </div>
+      <div class="user-box d-flex flex-column">
+        <label for="sec"><b>Section</b></label>
+        <input type="text" name="sec" id="sec" />
+        <p id="sec_err"></p>
+        <br />
+      </div>
+      <!-- <button onclick="submitFunction()">Submit</button> -->
+    </form>
+
+    <div class="container d-flex justify-content-center">
+      <div>
+        <table
+          class="table table-primary shadow-lg mb-5 text-center"
+          id="myTable"
+        >
+          <thead>
+            <tr>
+              <th>S.NO</th>
+              <th>Subject</th>
+              <th>Mark</th>
+              <th>Percentage</th>
+              <th>Grade</th>
+            </tr>
+          </thead>
+          <tbody id="displayArea"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="d-flex justify-content-center mt-5">
+      <button
+        type="button"
+        onclick="submitFunction()"
+        value="Submit"
+        class="btn btn-outline-light"
+      >
+        Submit
+      </button>
+
+      <button
+        type="button"
+        onclick="addrowFunction()"
+        value="Submit"
+        class="btn btn-outline-light ms-5"
+      >
+        Add Row
+      </button>
+    </div>
+  </body>
+</html>
